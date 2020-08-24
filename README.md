@@ -24,6 +24,7 @@ sudo yum groupinstall "development tools" -y
 git clone https://github.com/haad/proxychains.git
 cd proxychains
 make
-tar cfzv proxy.tar.gz libproxychains4.so proxychains4
+mv proxychains4 proxychains
+tar cfzv proxy.tar.gz libproxychains4.so proxychains
 base64 proxy.tar.gz > out.base64
 ```
